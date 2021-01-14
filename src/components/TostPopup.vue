@@ -5,7 +5,9 @@
 <script>
 let timer;
 export default {
-  props: ["open"],
+  props: {
+    open: Boolean,
+  },
   watch: {
     // open에 새로운 값이 들어올 때
     open(newValue) {

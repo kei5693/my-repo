@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ProgressBar />
     <form v-on:submit="submitForm">
       <div>
         <label for="username">ID: </label>
@@ -20,13 +19,12 @@
     </form>
     <!-- <p v-if="!isUsernameValid">올바르지 않은 이메일</p> -->
     <!-- <p v-if="isUsernameValid">이메일 형식이 맞습니다.</p> -->
-    <TostPopup v-bind:open="isSuccess" v-on:close="isSuccess = false" />
+    <TostPopup v-bind:open="isSuccess" v-on:close="closePopup" />
   </div>
 </template>
 
 <script>
 import TostPopup from "@/components/TostPopup.vue";
-import ProgressBar from "@/components/ProgressBar.vue";
 
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -36,7 +34,6 @@ function validateEmail(email) {
 export default {
   components: {
     TostPopup,
-    ProgressBar,
   },
   data() {
     return {
@@ -62,6 +59,9 @@ export default {
     initForm() {
       this.username = "";
       this.password = "";
+    },
+    closePopup() {
+      this.isSuccess = false;
     },
   },
 };
