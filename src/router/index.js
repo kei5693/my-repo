@@ -5,6 +5,8 @@ import About from '../views/About.vue'
 import NumberBaseball from '../views/NumberBaseball.vue'
 import ResponseCheck from '../views/ResponseCheck.vue'
 import MakeTable from '../views/MakeTable.vue'
+import RockScissorsPaper from '../views/RockScissorsPaper.vue'
+import LottoGenerator from '../views/LottoGenerator.vue'
 
 Vue.use(VueRouter)
 
@@ -34,6 +36,16 @@ const routes = [
     path: '/MakeTable',
     name: 'MakeTable',
     component: MakeTable
+  },
+  {
+    path: '/RockScissorsPaper',
+    name: 'RockScissorsPaper',
+    component: RockScissorsPaper
+  },
+  {
+    path: '/LottoGenerator',
+    name: 'LottoGenerator',
+    component: LottoGenerator
   }
 ]
 

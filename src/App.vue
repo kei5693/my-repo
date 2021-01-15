@@ -6,7 +6,9 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/NumberBaseball">NumberBaseball</router-link> |
       <router-link to="/ResponseCheck">ResponseCheck</router-link> |
-      <router-link to="/MakeTable">MakeTable</router-link>
+      <router-link to="/MakeTable">MakeTable</router-link> |
+      <router-link to="/RockScissorsPaper">RockScissorsPaper</router-link> |
+      <router-link to="/LottoGenerator">LottoGenerator</router-link> |
     </div>
     <router-view />
   </div>
